@@ -11,4 +11,4 @@ allround-list                           # with no arguments it will just list al
 ```
 
 ## LICENSE
-MIT © [Srijan R Shetty](https://allroundclub.com)
+MIT © [allround](https://allroundclub.com)
