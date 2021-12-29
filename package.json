@@ -1,6 +1,6 @@
 {
   "name": "allround-list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "allround list utility",
   "main": "app.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allround-club/list.git"
+    "url": "git+https://github.com/allround-club/allround-list.git"
   },
   "keywords": [
     "allround"
@@ -18,7 +18,7 @@
   "author": "allround",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/allround-club/list/issues"
+    "url": "https://github.com/allround-club/allround-list/issues"
   },
   "homepage": "https://allroundclub.com",
   "dependencies": {
