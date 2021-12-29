@@ -1,0 +1,103 @@
+{
+  "name": "allround-list",
+  "version": "0.0.0",
+  "description": "allround list utility",
+  "main": "app.js",
+  "scripts": {
+    "test": "eslint -c package.json ./src/**/*.ts",
+    "build": "tsc --outdir bin",
+    "deploy": "npm run build && np --any-branch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allround-club/list.git"
+  },
+  "keywords": [
+    "allround"
+  ],
+  "author": "allround",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allround-club/list/issues"
+  },
+  "homepage": "https://allroundclub.com",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.1.0",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@types/node": "^13.5.2",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^3.1.0",
+    "np": "^5.2.1",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "allround-list": "./bin/app.js"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/ban-ts-ignore": 0
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        1,
+        "always",
+        [
+          "build",
+          "cfg",
+          "chore",
+          "docs",
+          "feat",
+          "fix",
+          "lint",
+          "refactor",
+          "revert"
+        ]
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS && npm run test",
+      "pre-push": "npm run build"
+    }
+  }
+}
