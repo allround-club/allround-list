@@ -22,7 +22,7 @@
   },
   "homepage": "https://allroundclub.com",
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "commander": "^4.1.0",
     "tslib": "^1.10.0"
   },
